@@ -1,13 +1,14 @@
 $(document).ready(function() {
     $('form').submit(function() {
         // your code here (build up your url)
-        event.preventDefault();
+        event.preventDefault(); // no default action
         console.log('Data sent.');
-        var citName = $('#cityName').val();
+        var citName = $('#cityName').val(); 
 
         var url = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&" + "units=imperial" + openWeatherMapAPI;
-        console.log ( url );
+        console.log (url);
 
+        // Default given function name 'res'
         $.get(url, function(res) {
             // your code here
             console.log(res);
